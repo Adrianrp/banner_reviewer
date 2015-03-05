@@ -1,0 +1,343 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+/* ----------- VARIABLES ------------------- */
+$brand-color: #fff200;
+$body_bg: rgb(234, 234, 234);
+$box: rgb(204,204,204);
+/* ------------------------ */
+
+/* ----------- MIXINS --------------------- */
+@mixin spacer ($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+/* ------------------------ */
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, 
+.col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, 
+.col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, 
+.col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, 
+.col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, 
+.col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, 
+.col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, 
+.col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  padding-right: 0;
+  padding-left: 0;
+}
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default
+.navbar-nav > li > a:focus {
+  background-color: #ece000;
+}
+/* Space out content a bit */
+body {
+  padding-bottom: 20px;
+  background-color: $body_bg;
+}
+img {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  position: absolute;
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+  }
+}
+.navbar-brand {
+
+  img {
+    max-width: 50%;
+  }
+}
+.navbar-default {
+  background-color: $brand-color;
+  border-color: #E4E100;
+}
+/* Custom page footer */
+.footer {
+  padding-top: 50px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+.side-right {
+  padding-top: 10px;
+}
+/* ------------ INDEX ----------------- */
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  background-image: url("../images/bg_banner.png");
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+}
+.yellow-me {
+  color: $brand-color;
+}
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+
+  a {
+    color: #fff200;
+  }
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    //position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+}
+
+/* ------------- */
+/* ----------- BANNERS --------------- */
+.page-bg {
+  height: 2028px;
+}
+.head-bg {
+  height: 120px;
+  background-color: $box;
+  img {
+    max-width: 100%;
+  }
+}
+.ad-wrapper {
+  position: relative;
+}
+.b_160_600 {
+  position: absolute;
+  top: 113px;
+  left: -165px;
+  z-index: 9;
+  height: 600px;
+  width: 160px;
+  padding: 0 0 8px;
+}
+.b_180_500 {
+  position: absolute;
+  top: -160px;
+  right: -180px;
+  height: 500px;
+  width: 180px;
+}
+.b_300_250 {
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+.b_300_600 {
+  padding-left: 5px;
+  @include spacer(0,0,10px);
+}
+.b_380_500 {
+  height: 500px;
+  width: 380px;
+  background-color: $box;
+  float: right;
+}
+.b_580_500 {
+  @include spacer(0,5px);
+  width: 580px;
+  height: 500px;
+  img {
+    margin-left: 0;
+  }
+}
+.b_728_90 {
+}
+.b_930_180 {
+  width: 930px;
+  height: 180px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 12px;
+}
+.b_980_150 {
+  width: 980px;
+  @include spacer(0,0,10px);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.b_980_300 {
+  @include spacer(0,0,10px);
+}
+.b_1000_150 {
+  @include spacer(0,0,10px);
+  float: right;
+}
+
+
+/* -------------- */
+/* --------------- WEBPAGE DUMMY FLAT ---------------- */
+.no_space {
+  padding-left: 0;
+}
+.d_nav {
+  height: 28px;
+  background-color: $box;
+  @include spacer(0, 0, 10px) ;
+}
+.d_head {
+  height: 70px;
+  @include spacer(0, 0, 10px);
+  background-color: $box;
+}
+.d_underhead {
+  height: 54px;
+  @include spacer(0, 0, 10px);
+  background-color: $box;
+}
+.d_big_asset {
+  height: 460px;
+  padding-left: 0;
+  padding-right: 5px;
+  @include spacer(0,5px,26px);
+  width: 66%;
+  background-color: $box;
+}
+.d_middle {
+  height: 227px;
+  @include spacer(0, 0, 5px);
+  padding-left: 5px;
+  padding-bottom: 5px;
+  background-color: $box;
+}
+
+.d_long {
+  background-color: $box;
+  @include spacer(10px,0,0,0);
+  height: 117px;
+}
+.d_news_feed {
+  height: 211px;
+  background-color: $box;
+  @include spacer(10px);
+}
+/* -------------------- */
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 64em) {
+  .container {
+    width: 1000px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+  }
+  .d_big_asset {
+  }
+}
+@media screen and (min-width: 100em) {
+  .container {
+    width: 1260px;
+  }
+}

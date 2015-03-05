@@ -1,0 +1,23 @@
+<!-- MAIN NAV ----------------------------- -->
+<div id="nav_template">
+<nav class="navbar navbar-default navbar-fixed-bottom">
+<div  class="container-fluid">
+	<a class="navbar-brand" href="index.html">
+		<img alt="Brand" src="images/yellow.png">
+	</a>
+	<div class="container">
+		<ul class="nav navbar-nav navbar-left">{{#sites}}
+			<li>{{#url}} {{.}} {{/url}} </li>
+		{{/sites}}</ul>
+	</div>
+</div>
+</nav>
+</div>
+<!-- END MAIN NAV -->
+
+
+<!-- FOOTER -------------------------------- -->
+<div id="template_footer" class="container">
+	<p><span class="glyphicon glyphicon-heart"></span> Yellow Advertising Agency</p>
+</div>
+<!-- END FOOTER -->
